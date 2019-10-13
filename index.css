@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+}
+
+html ,body{
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI";
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#app{
+  
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#list{
+  display: flex;
+  z-index: 2;
+  position: relative;
+  flex-wrap:wrap;
+  /* background-blend-mode:color; */
+  /* mix-blend-mode:color; */
+  /* background: #fff; */
+  
+}
+#list li{
+  /* border:3px solid #000; */
+  width: 76px;
+  height: 81px;
+  padding:5px;
+  margin: 0 3px 3px 0;
+  border-radius: 3px;
+  mix-blend-mode:hue;
+  background: rgb(255, 255, 255);
+  z-index: 3;
+  cursor: pointer;
+  position: relative;
+}
+#list li.active{
+  mix-blend-mode:multiply;
+}
+#list li:before{
+  content: '';
+  position: absolute;
+  border:1px solid rgb(190, 190, 190);
+  width: 76px;
+  height: 81px;
+  top: 0;
+  left: 0;
+}
+#list li:hover{
+  mix-blend-mode:multiply;
+}
+
+#app img{
+  width: 100%;
+  filter: grayscale(100%) contrast(80%);
+  
+}
+.bg{
+  background:url(./images/b.jpg);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  /* filter: grayscale(100%) contrast(80%); */
+  
+  
+}
+.container{
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-wrap:wrap;
+  mix-blend-mode: multiply;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  background: #000;
+}
+.block{
+  width: 76px;
+  height: 81px;
+  background: #fff;
+  /* border:1px solid #000; */
+  margin: 0 3px 3px 0;
+  border-radius: 3px;
+  font-size: 35px;
+  
+}
+.board{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  padding:15px 20px;
+  width: 200px;
+  height: 150px;
+  z-index: 10;
+}
